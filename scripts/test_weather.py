@@ -16,7 +16,7 @@ class TestWeather:
     def setUp(self):
         self.weather_api = WeatherAPI()
 
-    @pytest.mark.parametrize("username, code, expect", case_data)
+    @pytest.mark.parametrize("status_code", case_data)
     @allure.story("Check the weather for day after tomorrow")
     def test01_get_weather_9dayforecast(self, status_code):
         # Obtain the current time, 13-bit timestamp
